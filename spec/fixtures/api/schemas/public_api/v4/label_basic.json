@@ -1,0 +1,28 @@
+{
+  "type": "object",
+  "required": [
+    "id",
+    "name",
+    "color",
+    "description",
+    "description_html",
+    "text_color",
+    "remove_on_close"
+  ],
+  "properties": {
+    "id": { "type": "integer" },
+    "name": { "type": "string" },
+    "color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{3}{1,2}$"
+    },
+    "description": { "type": ["string", "null"] },
+    "description_html": { "type": ["string", "null"] },
+    "text_color": {
+      "type": "string",
+      "pattern": "^#[0-9A-Fa-f]{3}{1,2}$"
+    },
+    "remove_on_close": { "type": "boolean" }
+  },
+  "additionalProperties": false
+}
